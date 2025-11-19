@@ -66,6 +66,8 @@ const BackgroundControls = ({ project }) => {
         } catch (error) {
             console.error("Error removing background:",error);
             toast.error("Failed to remove background. Please try again.");
+        } finally {
+            setProcessingMessage(null);
         }
     };
 
